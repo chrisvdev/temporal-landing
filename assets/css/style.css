@@ -1,0 +1,126 @@
+:root {
+  --gray-50: #f6f6f7;
+  --gray-100: #efeff0;
+  --gray-200: #e1e1e4;
+  --gray-300: #d0cfd2;
+  --gray-400: #bcbabf;
+  --gray-500: #a9a7ad;
+  --gray-600: #98959c;
+  --gray-700: #807e84;
+  --gray-800: #69676c;
+  --gray-900: #575659;
+  --gray-950: #333234;
+  --card-width: 20.079rem; /* 85mm */
+  --card-height: 12.992rem; /* 55mm */
+  --factor: 2;
+}
+
+* {
+  font-family: "futura-pt", sans-serif;
+  font-weight: 400, 500, 600, 700;
+  font-style: normal, italic;
+}
+
+body {
+  background: var(--gray-950);
+  display: grid;
+  place-items: center;
+  height: 100dvh;
+  width: 100dvw;
+  overflow: hidden;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.15rem;
+  height: var(--card-height);
+  width: var(--card-width);
+  color: var(black);
+  background: var(--gray-600);
+}
+
+section::before {
+  position: absolute;
+  z-index: -1;
+  right: 70dvw;
+  bottom: 55dvh;
+  height: calc(var(--card-height) * var(--factor));
+  width: calc(var(--card-width) * var(--factor));
+  content: "";
+  border-radius: 0.5rem;
+  background: var(--gray-900);
+  rotate: -40deg;
+}
+
+section::after {
+  position: absolute;
+  z-index: -1;
+  left: 75dvw;
+  bottom: 78dvh;
+  height: calc(var(--card-height) * var(--factor));
+  width: calc(var(--card-width) * var(--factor));
+  content: "";
+  border-radius: 0.5rem;
+  background: var(--gray-900);
+  rotate: -55deg;
+}
+
+h1 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+ul {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+}
+
+div {
+  position: absolute;
+  z-index: -1;
+  left: calc(50dvw - 17rem);
+  top: 88dvh;
+  height: calc(var(--card-height) * var(--factor));
+  width: calc(var(--card-width) * var(--factor));
+  content: "";
+  border-radius: 0.5rem;
+  background: var(--gray-900);
+  rotate: -5deg;
+}
+
+div::before {
+  position: absolute;
+  z-index: -1;
+  left: 45dvw;
+  bottom: 55dvh;
+  height: calc(var(--card-height) * var(--factor));
+  width: calc(var(--card-width) * var(--factor));
+  content: "";
+  border-radius: 0.5rem;
+  border: 0.05rem solid black;
+  rotate: -62deg;
+}
+
+div::after {
+  position: absolute;
+  z-index: -1;
+  right: 45dvw;
+  bottom: 35dvh;
+  height: calc(var(--card-height) * var(--factor));
+  width: calc(var(--card-width) * var(--factor));
+  content: "";
+  border-radius: 0.5rem;
+  border: 0.05rem solid black;
+  rotate: -52deg;
+}
